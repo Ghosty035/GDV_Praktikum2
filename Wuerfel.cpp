@@ -76,8 +76,37 @@
         glVertex3f(+fSeitenL / 2.0f, -fSeitenL / 2.0f, +fSeitenL / 2.0f);
         glColor4f(1.0f, 0.0f, 0.0f, 1.0f); //ROT
         glVertex3f(-fSeitenL / 2.0f, -fSeitenL / 2.0f, +fSeitenL / 2.0f);
+
         glEnd();
         return;
+    }
+
+void Wuerfel::Wuerfel1(GLfloat fSeitenLX, GLfloat fSeitenLY, GLfloat fSeitenLZ) {
+    glPushMatrix();
+    glScalef(fSeitenLX, fSeitenLY, fSeitenLZ);
+    zeichneWuerfel(1.0f);
+    glTranslatef(10.0f, 10.0f, 10.0f);
+    glPopMatrix();
+    }
+
+void Wuerfel::scaleCube(GLfloat scaleX, GLfloat scaleY, GLfloat scaleZ) {
+    glLoadIdentity();
+    glPushMatrix();
+
+    glScalef(scaleX, scaleY, scaleZ);
+    glPopMatrix();
+    }
+void Wuerfel::translateCube(GLfloat translateX, GLfloat translateY, GLfloat translateZ) {
+    glPushMatrix();
+
+
+    glPopMatrix();
+    }
+void Wuerfel::rotateCube(GLfloat rotateX, GLfloat rotateY, GLfloat rotateZ) {
+    glPushMatrix();
+
+
+    glPopMatrix();
     }
 
 

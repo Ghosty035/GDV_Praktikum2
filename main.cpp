@@ -9,9 +9,9 @@ void Init()
 {
     // Hier finden jene Aktionen statt, die zum Programmstart einmalig
     // durchgeführt werden müssen
-  /*  glEnable(GL_CULL_FACE);
+    glEnable(GL_CULL_FACE);
     glFrontFace(GL_CCW);
-    glCullFace(GL_BACK);*/
+    glCullFace(GL_BACK);
 }
 
 void RenderScene() //Zeichenfunktion
@@ -19,8 +19,10 @@ void RenderScene() //Zeichenfunktion
     // Hier befindet sich der Code der in jedem Frame ausgefuehrt werden muss
     glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
     glBegin(GL_POLYGON);
+   // glTranslatef(1000.0f, -1000.0f, 1000.0f);
+    //gluLookAt(300, 300, 300, 0, 0 ,0, 0, 0, 0);
     glPushMatrix();
-    n_Wuerfel->zeichneWuerfel(30.0f);
+    n_Wuerfel->Wuerfel1(250.0f, 1.0f, 1000.0f);
     glPopMatrix();
 
   /*  glColor4f(1.0, 0.0, 0.0, 1.0);
