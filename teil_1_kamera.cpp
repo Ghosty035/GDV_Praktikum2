@@ -5,8 +5,7 @@
 #include <GL/freeglut.h>         //lädt alles für OpenGL
 
 #include "Wuerfel.h"
-Wuerfel *n_Wuerfel = new Wuerfel();
-Wuerfel *n_Wuerfel2 = new Wuerfel();
+
 void Init()	
 {
    // Hier finden jene Aktionen statt, die zum Programmstart einmalig 
@@ -23,17 +22,14 @@ void RenderScene() //Zeichenfunktion
    glBegin(GL_POLYGON);
    // Kameraposition, Blickwinkel und Up-Vector
    gluLookAt(1., 1., 1., 0., 0., 0., 0., 1., 0.); // extrinsische Kameraparameter
-   glPushMatrix();
-   n_Wuerfel->Wuerfel1(2.0f, 0.2f, 0.3f, 0.05f, 0, 0, 0);
-   n_Wuerfel->Wuerfel1(2.0f, 0.06f, 0.05f, 0.05f, 0, 0.4f, 0);
-   n_Wuerfel->Wuerfel1(2.0f, 0.03f, 0.1f, 0.05f, -0.25f, 0.2f, 0);
-   n_Wuerfel->Wuerfel1(2.0f, 0.03f, 0.1f, 0.05f, -0.25, -0.2, 0);
-   n_Wuerfel->Wuerfel1(2.0f, 0.03f, 0.1f, 0.05f, 0.25f, 0.2f, 0);
-   n_Wuerfel->Wuerfel1(2.0f, 0.03f, 0.1f, 0.05f, 0.25, -0.2, 0);
-   n_Wuerfel->Wuerfel1(2.0f, 0.03f, 0.15f, 0.05f, -0.1, -0.5, 0);
-   n_Wuerfel->Wuerfel1(2.0f, 0.03f, 0.15f, 0.05f, 0.1, -0.5, 0);
-  // n_Wuerfel2->Wuerfel1(0.0f, 0.0f, 0.0f);
-   glPopMatrix();
+   Wuerfel1(2.0f, 0.2f, 0.3f, 0.05f, 0, 0, 0);
+   Wuerfel1(2.0f, 0.06f, 0.05f, 0.05f, 0, 0.4f, 0);
+   Wuerfel1(2.0f, 0.03f, 0.1f, 0.05f, -0.25f, 0.2f, 0);
+   Wuerfel1(2.0f, 0.03f, 0.1f, 0.05f, -0.25, -0.2, 0);
+   Wuerfel1(2.0f, 0.03f, 0.1f, 0.05f, 0.25f, 0.2f, 0);
+   Wuerfel1(2.0f, 0.03f, 0.1f, 0.05f, 0.25, -0.2, 0);
+   Wuerfel1(2.0f, 0.03f, 0.15f, 0.05f, -0.1, -0.5, 0);
+   Wuerfel1(2.0f, 0.03f, 0.15f, 0.05f, 0.1, -0.5, 0);
    glEnd();
    glutSwapBuffers();
 }
